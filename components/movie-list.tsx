@@ -48,7 +48,7 @@ export const MovieList = ({ category = "now_playing" }) => {
             >
               <Link
                 href={`movie/${x.id}`}
-                className="block w-full h-[290px] bg-slate-100"
+                className="block w-full h-auto bg-slate-100"
               >
                 <Image
                   src={process.env.NEXT_PUBLIC_POST_URL + x.poster_path}
