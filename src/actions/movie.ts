@@ -13,6 +13,18 @@ export async function getMovie(id: string): Promise<Movie> {
   return res.json();
 }
 
+export async function getCast(id: string): Promise<Credit> {
+  const res = await customFetch({
+    url: `/movie/${id}/credits?language=en-US`,
+    method: "GET",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
 export async function getKeywords(id: string): Promise<Keywords> {
   const res = await customFetch({
     url: `/movie/${id}/keywords`,
