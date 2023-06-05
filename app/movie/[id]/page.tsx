@@ -12,15 +12,15 @@ export default async function Movie({
   return (
     <main className="flex flex-col items-center">
       <Suspense fallback={<>loading ...</>}>
-        {/* @ts-expect-error Server Component */}
+         {/* @ts-ignore */}
         <MovieHeader movieId={id} />
         <div className="flex flex-col md:flex-row  lg:w-[90%] w-full px-4 my-6">
           <div className="flex flex-col w-[100%] overflow-hidden flex-1 ">
-            {/* @ts-expect-error Server Component */}
+             {/* @ts-ignore */}
             <Cast movieId={id} />
           </div>
           <div className="w-[280px] md:ml-8 ">
-            {/* @ts-expect-error Server Component */}
+             {/* @ts-ignore */}
             <AsideMovie movieId={id} />
           </div>
         </div>

@@ -20,7 +20,7 @@ async function AsideMovie({ movieId }: { movieId: string }) {
         <Info label="Budget" value={`$${movie.budget}`} />
         <Info label="Revenue" value={`$${movie.revenue}`} />
       </ul>
-      {/* @ts-expect-error Server Component */}
+      {/* @ts-ignore */}
       <Keywords movieId={movieId} />
     </>
   );

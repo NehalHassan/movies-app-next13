@@ -75,7 +75,7 @@ export default async function MovieHeader({ movieId }: { movieId: string }) {
               <p>{movie.overview}</p>
             </div>
             <Suspense fallback={<>loading...</>}>
-              {/* @ts-expect-error Server Component */}
+               {/* @ts-ignore */}
               <Cast movieId={movieId} />
             </Suspense>
           </div>
